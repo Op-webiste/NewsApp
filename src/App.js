@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import News from './components/News';
 import React, { useState } from 'react'
-// import{BrowserRouter as Router, Routes , Route} from 'react-router-dom'
+import{BrowserRouter as Router, Routes , Route} from 'react-router-dom'
 import LoadingBar from 'react-top-loading-bar'
 
 
@@ -33,16 +33,15 @@ function App() {
   let pageSize = 10;
   return (
    <>
-   {/* <Router> */}
+   <Router>
    <style>{`body { background-color: ${bodyClr}; }`}</style>
    <LoadingBar
         color='#f11946'
         progress={progress}
       />
    <Navbar clr={clr} textclr={textclr} text={text} changeMode={changeMode}/>
-   <News  setProgress={setProgress} category="business" pageSize={pageSize}/>
-    {/* <Routes> */}
-   {/* <Route exact path="/NewsApp" element={<News  key="business" setProgress={setProgress} category="business" pageSize={pageSize}/>}></Route>
+    <Routes>
+   <Route exact path="/NewsApp" element={<News  key="business" setProgress={setProgress} category="business" pageSize={pageSize}/>}></Route>
    <Route exact path="/NewsApp/general" element={<News  key="general" setProgress={setProgress} category="general" pageSize={pageSize}/>}></Route>
    <Route exact path="/NewsApp/science" element={<News  key="science" setProgress={setProgress} category="science" pageSize={pageSize}/>}></Route>
    <Route exact path="/NewsApp/sports" element={<News  key="sports" setProgress={setProgress} category="sports" pageSize={pageSize}/>}></Route>
@@ -50,7 +49,7 @@ function App() {
    <Route exact path="/NewsApp/entertainment" element={<News  key="entertainment" setProgress={setProgress} category="entertainment" pageSize={pageSize}/>}></Route>
    <Route exact path="/NewsApp/technology" element={<News  key="technology" setProgress={setProgress} category="technology" pageSize={pageSize}/>}></Route>
    </Routes>
-   </Router> */}
+   </Router>
    </>
   );
 }
