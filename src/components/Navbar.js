@@ -1,37 +1,37 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 export default function Navbar(props) {
   return (
     <div>
       <nav className={`navbar navbar-expand-lg ${props.clr} fixed-top`}>
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/NewsApp/">Navbar</Link>
+          <a className="navbar-brand" href="/NewsApp/">Navbar</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/NewsApp/">Home</Link>
+                <a className="nav-link active" aria-current="page" href="/NewsApp/">Home</a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/NewsApp/general">General</Link>
+                <a className="nav-link" href="/NewsApp/general">General</a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/NewsApp/science">Science</Link>
+                <a className="nav-link" href="/NewsApp/science">Science</a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/NewsApp/sports">Sports</Link>
+                <a className="nav-link" href="/NewsApp/sports">Sports</a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/NewsApp/health">Health</Link>
+                <a className="nav-link" href="/NewsApp/health">Health</a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/NewsApp/entertainment">Entertainment</Link>
+                <a className="nav-link" href="/NewsApp/entertainment">Entertainment</a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/NewsApp/technology">Technology</Link>
+                <a className="nav-link" href="/NewsApp/technology">Technology</a>
               </li>
             </ul>
             <div className={`form-check form-switch ${props.textclr} mx-3`}>
